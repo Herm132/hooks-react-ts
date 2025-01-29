@@ -1,11 +1,18 @@
-import { FormularioComponent } from "./components/FormularioComponent"
+// import { CalculosPesadosComponent } from "./components/CalculosPesadosComponent"
+import { CallBackComponent } from "./components/CallBackComponent"
+// import { FormularioComponent } from "./components/FormularioComponent"
+// import { UsuariosComponent } from "./components/UsuariosComponent"
+
 
 export const HooksApp = () => {
   return (
     <div >
-      <h1>Hola </h1>
+      <h1>Custom Hook </h1>
       <hr />
-      <FormularioComponent></FormularioComponent>
+      {/* <UsuariosComponent></UsuariosComponent>
+      <FormularioComponent></FormularioComponent> */}
+      {/* <CalculosPesadosComponent></CalculosPesadosComponent> */}
+      <CallBackComponent></CallBackComponent>
       </div>
   )
 }

@@ -1,4 +1,4 @@
-import { FormEvent } from "react";
+import { FormEvent, useEffect, useRef } from "react";
 import { useForm } from "../hooks/useForm";
 
 interface FormState {
@@ -8,6 +8,8 @@ interface FormState {
 }
 
 export const FormularioComponent = () => {
+  const focusRef = useRef<HTMLInputElement | null>(null)
+  console.log(focusRef)
   const initialForm: FormState = {
     userName: "",
     email: "",
@@ -30,6 +32,12 @@ export const FormularioComponent = () => {
     // Limpiar los campos
     setFormState(initialForm);
   };
+  useEffect(() => {
+    focusRef.current?.focus()
+  
+
+  },)
+  
 
   return (
     <div>
@@ -52,6 +60,7 @@ export const FormularioComponent = () => {
         <div className="form-group">
           <label htmlFor="email">Correo Electrónico</label>
           <input
+            ref={focusRef}
             type="email"
             className="form-control"
             name="email"
